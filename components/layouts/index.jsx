@@ -1,4 +1,5 @@
 import Link from "next/dist/client/link";
+import { useRouter } from "next/router";
 
 export default function Layout({ children, className }) {
   return (
@@ -10,18 +11,25 @@ export default function Layout({ children, className }) {
 }
 
 const Aside = () => {
-  const Button = () => {
+  const router = useRouter();
+  const Button = ({ name, icon, href }) => {
     return (
-      <button className="flex gap-5 py-4 bg-secondary rounded-lg items-center justify-center w-[238px]">
-        <img src="/icon/home.svg" alt="" />
-        <p className="font-semibold text-sm text-white">Home</p>
-      </button>
+      <Link href={href}>
+        <button
+          className={`flex gap-5 py-4   rounded-lg items-center justify-center mx-5 ${
+            router.pathname === href ? "bg-secondary" : "null"
+          }`}
+        >
+          <img src={`/icon/${icon}.svg`} alt="" />
+          <p className="font-semibold text-sm text-white">{name}</p>
+        </button>
+      </Link>
     );
   };
 
   return (
     <aside className="w-2/12 bg-primary flex flex-col items-center justify-between py-20 flex-none">
-      <div className="flex items-center justify-between flex-col">
+      <div className="flex items-center justify-between flex-col w-full">
         <img src="pln-logo.svg" alt="Logo PLN" className="mb-9" />
         <img src="default-avatar.svg" alt="Avatar" className="mb-4" />
         <Link href="#" className=" flex itemscenter justify-center " passHref>
@@ -30,8 +38,12 @@ const Aside = () => {
           </p>
         </Link>
 
-        <div className="flex flex-col gap-3 mt-7">
-          <Button />
+        <div className="flex flex-col gap-3 mt-7 w-full">
+          <Button name="Home" icon="home" href={"/"} />
+          <Button name="Board" icon="board" href={"board"} />
+          <Button name="Chart" icon="chart" href={"chart"} />
+          <Button name="Jadwal" icon="schedule" href={"jadwal"} />
+          <Button name="Laporan" icon="report" href={"laporan"} />
         </div>
       </div>
 
