@@ -1,15 +1,28 @@
-import Link from "next/link";
-export default function Login() {
+export default function Register() {
   return (
     <div className="min-h-screen bg-background bg-cover bg-no-repeat flex justify-center items-center m-auto flex-col ">
-      <img src="/up2b.png" alt="UP2B Jakban" className="mb-10" />
-      <img src="/akhlak.png" alt="AKHLAK" className="mb-10" />
       <h1 className="text-2xl text-primary font-semibold text-center mb-10">
         Halo Selamat Datang <br /> Di{" "}
         <span className="text-secondary">SCADA</span>
       </h1>
       <div className="flex items-center justify-center">
         <form action="GET" className="w-96">
+          <div className="flex flex-col mb-5">
+            <label
+              htmlFor="name"
+              className="font-semibold text-sm text-[#627D98] pl-2 mb-3"
+            >
+              Name
+            </label>
+            <input
+              type="name"
+              id="name"
+              name="name"
+              className="border  rounded-lg placeholder:text-[#627D98] py-3 pl-6 text-xs font-medium"
+              placeholder="Name"
+              required
+            />
+          </div>
           <div className="flex flex-col mb-5">
             <label
               htmlFor="email"
@@ -26,6 +39,23 @@ export default function Login() {
               required
             />
           </div>
+          <div className="flex flex-col mb-5">
+            <label
+              htmlFor="phone"
+              className="font-semibold text-sm text-[#627D98] pl-2 mb-3"
+            >
+              Nomor Handphone
+            </label>
+            <input
+              type="text"
+              id="phone"
+              name="phone"
+              className="border  rounded-lg placeholder:text-[#627D98] py-3 pl-6 text-xs font-medium"
+              placeholder="Nomor Handphone"
+              required
+            />
+          </div>
+
           <div className="flex flex-col mb-5">
             <label
               htmlFor="password"
@@ -46,12 +76,10 @@ export default function Login() {
             Masuk
           </button>
           <p className="text-center text-[#627D98] text-xs font-medium">
-            Belum punya akun?{" "}
-            <Link href="user/register">
-              <a href="#" className="text-secondary  hover:underline">
-                Daftar
-              </a>
-            </Link>
+            Sudah punya akun?{" "}
+            <a href="#" className="text-secondary  hover:underline">
+              Masuk
+            </a>
           </p>
         </form>
       </div>

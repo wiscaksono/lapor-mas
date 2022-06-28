@@ -1,10 +1,10 @@
 import Layout from "../components/layouts";
 import React, { useEffect, useRef } from "react";
 import Chart from "chart.js/auto";
+import { Doughnut } from "react-chartjs-2";
 
 export default function Graph() {
   const canvasEl = useRef(null);
-
   const colors = {
     purple: {
       default: "rgba(149, 76, 233, 1)",
@@ -20,15 +20,12 @@ export default function Graph() {
 
   useEffect(() => {
     const ctx = canvasEl.current.getContext("2d");
-    // const ctx = document.getElementById("myChart");
-
     const gradient = ctx.createLinearGradient(0, 16, 0, 600);
     gradient.addColorStop(0, colors.purple.half);
     gradient.addColorStop(0.65, colors.purple.quarter);
     gradient.addColorStop(1, colors.purple.zero);
 
     const weight = [60.0, 60.2, 59.1, 61.4, 59.9, 60.2, 59.8, 58.6, 59.6, 59.2];
-
     const labels = [
       "Week 1",
       "Week 2",
