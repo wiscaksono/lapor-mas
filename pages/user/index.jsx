@@ -58,8 +58,8 @@ export default function UserHome() {
   );
 
   return (
-    <div className="min-h-screen bg-background bg-cover bg-no-repeat  flex-col ">
-      <nav className="flex items-center justify-between px-28 pt-16 fixed w-full h-max top-0">
+    <div className="min-h-screen bg-background bg-cover bg-no-repeat flex-col">
+      <nav className="flex items-center justify-between px-28 pt-4  ">
         <img
           src="/pln-logo.svg"
           alt="Logo PLN"
@@ -80,7 +80,7 @@ export default function UserHome() {
         </Link>
       </nav>
 
-      <section className="flex items-center justify-center flex-col h-screen">
+      <section className="flex items-center justify-center flex-col h-[85vh]">
         {render(active)}
       </section>
     </div>
