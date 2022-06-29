@@ -66,7 +66,7 @@ export default function UserHome() {
           onClick={() => setActive("Home")}
           className="cursor-pointer"
         />
-        <div className="flex items-center justify-center gap-16  font-semibold text-xs text-[#627D98]">
+        <div className="flex items-center justify-center gap-16 font-semibold text-xs text-[#627D98]">
           <NavbarMenu name="Home" />
           <NavbarMenu name="Buat Laporan" />
           <NavbarMenu name="Status Laporan" />

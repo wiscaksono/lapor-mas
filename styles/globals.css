@@ -16,7 +16,7 @@
   }
 
   .active {
-    @apply text-[#102A43] underline underline-offset-4;
+    @apply text-[#102A43] underline decoration-2 underline-offset-4;
   }
 
   label {
