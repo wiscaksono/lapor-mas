@@ -8,15 +8,12 @@ export default function BuatLaporan() {
 
   const Form = () => {
     return (
-      <div className="max-w-xl w-full">
+      <div className="max-w-xl w-full px-5">
         <h3 className="text-center font-semibold text-xl text-[#102A43] mb-12">
           Form Laporan <br /> Scada
         </h3>
 
-        <form
-          action=""
-          className="grid grid-cols-2 gap-x-3 gap-y-6 items-center"
-        >
+        <form className="grid grid-cols-1 lg:grid-cols-2 gap-x-3 gap-y-6 items-center">
           <div>
             <label htmlFor="Asal Unit">Asal Unit/Bidang</label>
             <HeadlessSelect />
@@ -47,7 +44,7 @@ export default function BuatLaporan() {
               placeholder="Jawaban Anda"
             ></textarea>
           </div>
-          <div className="col-span-2">
+          <div className="lg:col-span-2">
             <label htmlFor="Penjelasan">Penjelasan Singkat Gangguan</label>
             <textarea
               name="Penjelasan"
@@ -58,7 +55,7 @@ export default function BuatLaporan() {
               placeholder="Jawaban Anda"
             ></textarea>
           </div>
-          <label className="cursor-pointer col-span-2">
+          <label className="cursor-pointer lg:col-span-2">
             Lampirkan Bukti
             <span className="sr-only">Tambah Lampiran</span>
             <input

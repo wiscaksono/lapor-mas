@@ -1,6 +1,6 @@
 export default function Login() {
   return (
-    <div className="min-h-screen bg-background bg-cover bg-no-repeat flex justify-center items-center m-auto flex-col ">
+    <div className="min-h-screen bg-transparent lg:bg-background bg-cover bg-no-repeat flex justify-center items-center m-auto flex-col ">
       <h1 className="text-2xl text-primary font-semibold text-center mb-10">
         Halo Selamat Datang <br /> Di{" "}
         <span className="text-secondary">SCADA</span>

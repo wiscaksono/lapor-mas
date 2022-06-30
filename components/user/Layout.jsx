@@ -10,7 +10,7 @@ export default function UserLayout({ children }) {
     );
   };
   return (
-    <div className="min-h-screen bg-background bg-cover bg-no-repeat  flex-col ">
+    <div className="min-h-screen bg-transparent lg:bg-background bg-cover bg-no-repeat  flex-col ">
       <nav className="flex items-center justify-between px-28 pt-16 fixed w-full h-max top-0">
         <img src="/pln-logo.svg" alt="Logo PLN" />
         <div className="flex items-center justify-center gap-16  font-semibold text-xs text-[#627D98]">

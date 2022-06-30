@@ -12,11 +12,11 @@ export default function UserHome() {
   const Home = () => {
     return (
       <>
-        <h1 className="text-center text-6xl text-[#102A43] font-semibold mb-8">
+        <h1 className="text-center text-2xl lg:text-6xl text-[#102A43] font-semibold lg:mb-8 mb-5">
           Silahkan Laporkan <br /> Keluhan SCADA Anda
         </h1>
 
-        <div className="flex gap-7">
+        <div className="flex gap-5 lg:gap-7 flex-col lg:flex-row">
           <button
             className="bg-secondary rounded-lg font-semibold text-sm text-white w-[244px] h-[41px]"
             onClick={() => setActive("Buat Laporan")}
@@ -58,7 +58,7 @@ export default function UserHome() {
   );
 
   return (
-    <div className="min-h-screen bg-background bg-cover bg-no-repeat flex-col">
+    <div className="min-h-screen bg-transparent lg:bg-background bg-cover bg-no-repeat flex-col">
       <nav className="flex items-center justify-between px-28 pt-4  ">
         <img
           src="/pln-logo.svg"
@@ -80,7 +80,7 @@ export default function UserHome() {
         </Link>
       </nav>
 
-      <section className="flex items-center justify-center flex-col h-[85vh]">
+      <section className="flex items-center justify-center flex-col lg:h-[85vh] h-screen">
         {render(active)}
       </section>
     </div>
