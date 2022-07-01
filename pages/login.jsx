@@ -2,7 +2,11 @@ import Link from "next/link";
 export default function Login() {
   return (
     <div className="min-h-screen sm:bg-transparent  lg:bg-background bg-cover bg-no-repeat flex justify-center items-center m-auto flex-col ">
-      <img src="/up2b.png" alt="UP2B Jakban" className="mb-10" />
+      <img
+        src="/up2b.webp"
+        alt="UP2B Jakban"
+        className="mb-10 rounded-lg w-[384px]"
+      />
       <img src="/akhlak.png" alt="AKHLAK" className="mb-10" />
       <h1 className="text-2xl text-primary font-semibold text-center mb-10">
         Halo Selamat Datang <br /> Di{" "}

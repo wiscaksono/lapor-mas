@@ -8,7 +8,7 @@ export default function BuatLaporan() {
 
   const Form = () => {
     return (
-      <div className="max-w-xl w-full px-5">
+      <div className="max-w-xl w-full px-5 mb-20">
         <h3 className="text-center font-semibold text-xl text-[#102A43] mb-12">
           Form Laporan <br /> Scada
         </h3>
@@ -131,7 +131,7 @@ const HeadlessSelect = () => {
 
   const [selected, setSelected] = useState(people[0]);
   return (
-    <div className="">
+    <div>
       <Listbox value={selected} onChange={setSelected}>
         <div className="relative mt-1">
           <Listbox.Button className="relative w-full cursor-default bg-[#F2F2F2] rounded-lg  py-3 pl-6 pr-10 text-left  focus:outline-none focus-visible:outline-none text-xs text-[#979797]">
